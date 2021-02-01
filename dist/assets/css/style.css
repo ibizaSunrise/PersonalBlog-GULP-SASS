@@ -371,4 +371,45 @@ body {
     color: #fff;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 /* Blocks*/
+.page {
+    overflow: hidden;
+}
+
+.header {
+    height: 40px;
+    width: calc(100% - 300px);
+    background-color: #0d0d0d;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #202020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.main {
+    padding-left: 300px;
+    padding-top: 10rem;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
