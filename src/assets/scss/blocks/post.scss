@@ -8,13 +8,14 @@
 }
 
 .post__header {
-    margin: -2.5rem -2.5rem 2.5rem;
-    &--video {
-        margin: 0 0 2.5rem;
+    margin: 0 0 2.5rem;
+
+    &--preview {
+        margin: -2.5rem -2.5rem 2.5rem;
     }
 }
 
-.post__preview{
+.post__preview {
     display: block;
     min-width: 100%;
     height: auto;
@@ -33,6 +34,9 @@
             text-decoration: underline;
         }
     }
+    &--mb0 {
+        margin-bottom: 0;
+    }
 }
 
 .post__content {
@@ -41,9 +45,68 @@
 .post__text {
     font-size: 1.4rem;
     color: $text;
+    border-bottom: 1px solid $secondary;
+    padding-bottom: 1rem;
+
+    a {
+        color: $blue;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        font-size: 1em;
+    }
+
+    h2,
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    ul,
+    ol {
+        margin-bottom: 2rem;
+    }
+
+    ol {
+        list-style: decimal;
+        list-style-position: inside;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        display: block;
+        min-width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
 }
 
-.post__footer{
+.post__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,11 +139,33 @@
     }
 }
 
-.post__read{
+.post__read {
     font-size: 1.4rem;
     color: $blue;
     text-decoration: none;
     &:hover {
         text-decoration: underline;
     }
+}
+
+.post__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: $white;
+    a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.6;
+        transition: opacity 0.2s linear;
+        &:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+    }
+}
+
+.post__actions-icon {
+    margin-left: 0.5rem;
 }
