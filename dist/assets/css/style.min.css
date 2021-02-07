@@ -339,6 +339,12 @@ body {
 *:after {
   box-sizing: border-box; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
 /* Blocks*/
 .page {
   overflow: hidden; }
@@ -468,7 +474,8 @@ body {
 .nav__item {
   position: relative; }
   .nav__item:hover .nav__link {
-    background-color: #3137C9; }
+    background-color: #3137C9;
+    text-decoration: none; }
   .nav__item:hover > .subnav {
     display: block; }
 
@@ -532,7 +539,8 @@ body {
   padding: .45rem 1.2rem;
   transition: background-color .2s linear; }
   .subnav__link:hover {
-    background-color: #2c31b4; }
+    background-color: #2c31b4;
+    text-decoration: none; }
 
 .stories {
   display: grid;
@@ -681,11 +689,6 @@ body {
   color: #dedede;
   border-bottom: 1px solid #121212;
   padding-bottom: 1rem; }
-  .post__text a {
-    color: #3137C9;
-    text-decoration: none; }
-    .post__text a:hover {
-      text-decoration: underline; }
   .post__text h1,
   .post__text h2,
   .post__text h3,
@@ -695,6 +698,8 @@ body {
     font-weight: 700;
     margin-bottom: 1.8rem;
     font-size: 1em; }
+  .post__text a {
+    color: #3137C9; }
   .post__text h2,
   .post__text h1 {
     font-size: 1.8rem; }
@@ -728,11 +733,6 @@ body {
   display: flex;
   color: #828282;
   line-height: 1.2rem; }
-  .post__data a {
-    color: inherit;
-    text-decoration: none; }
-    .post__data a:hover {
-      text-decoration: underline; }
 
 .post__data-item:not(:last-child):after {
   content: "";
@@ -759,13 +759,8 @@ body {
   font-size: 1.2rem;
   color: #fff; }
   .post__actions a {
-    color: inherit;
-    text-decoration: none;
     opacity: 0.6;
     transition: opacity 0.2s linear; }
-    .post__actions a:hover {
-      text-decoration: underline;
-      opacity: 1; }
 
 .post__actions-icon {
   margin-left: 0.5rem; }
@@ -816,3 +811,36 @@ body {
   .pagination__link.active {
     background-color: #3137C9;
     box-shadow: 0 0 10px rgba(49, 55, 201, 0.15); }
+
+.related {
+  padding: 3rem 0 .5rem;
+  border-bottom: 1px solid #121212; }
+
+.related__title {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-style: 1.6rem;
+  line-height: 1.3;
+  font-weight: 500; }
+
+.related__list-item {
+  margin-bottom: 2.5rem; }
+
+.related__list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.related__list-item {
+  width: 50%;
+  margin-bottom: 2.5rem; }
+
+.related__list-title {
+  font-size: 1.4rem;
+  color: #f3eba2;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.related__list-date {
+  color: rgba(255, 255, 255, 0.5); }
