@@ -547,6 +547,14 @@ a:hover {
     background-color: #2c31b4;
 }
 
+.btn--rounded {
+    border-radius: 0.41em;
+}
+
+.btn--sm {
+    padding: 0.66em 1.25em;
+}
+
 .nav__list {
     display: -ms-flexbox;
     display: flex;
@@ -952,6 +960,14 @@ a:hover {
     background-color: #828282;
 }
 
+.post__subtitle {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 500;
+}
+
 .post__read {
     font-size: 1.4rem;
     color: #3137C9;
@@ -1043,16 +1059,8 @@ a:hover {
 }
 
 .related {
-    padding: 3rem 0 .5rem;
+    padding-bottom: .5rem;
     border-bottom: 1px solid #121212;
-}
-
-.related__title {
-    margin-bottom: 2rem;
-    color: #fff;
-    font-style: 1.6rem;
-    line-height: 1.3;
-    font-weight: 500;
 }
 
 .related__list-item {
@@ -1086,26 +1094,82 @@ a:hover {
 }
 
 .comments {
+    margin-top: 5rem;
+}
+
+.comments__item {
+    margin-bottom: 3rem;
+}
+
+.comments__item > .comments {
+    padding-left: 3rem;
     margin-top: 3rem;
 }
 
-.comments__title {
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
+.comments__header {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.comments__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.comments__author {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 1.5rem;
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.comments__name {
     color: #fff;
     font-weight: 500;
 }
 
+.comments__pubdate {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.comments__text {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    color: #dedede;
+}
+
+.comments__reply {
+    font-family: inherit;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    background: none;
+    border: none;
+    color: #3137C9;
+    cursor: pointer;
+}
+
+.comments__reply:hover {
+    text-decoration: underline;
+}
+
 .form__group {
     margin-bottom: 1.5rem;
+    position: relative;
 }
 
 .form__control {
     display: block;
     width: 100%;
+    padding: .5rem 0;
     background: none;
-    border-radius: 0;
     border: none;
+    border-bottom: 1px solid #828282;
+    border-radius: 0;
     box-shadow: none;
     font-family: inherit;
     font-style: 1.4rem;
@@ -1130,4 +1194,25 @@ a:hover {
 
 .form__control::placeholder {
     color: rgba(255, 255, 255, 0.2);
+}
+
+.form__control:focus + .form__line {
+    width: 100%;
+}
+
+.form__control--textarea {
+    resize: none;
+    height: 30px;
+    overflow: hidden;
+}
+
+.form__line {
+    width: 0;
+    height: 1px;
+    background-color: #3137C9;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: width .2s linear;
 }
