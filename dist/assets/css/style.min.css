@@ -353,6 +353,8 @@ a {
   font-size: 2.1rem;
   color: #fff;
   margin-bottom: 3rem; }
+  .page__title--center {
+    text-align: center; }
 
 .header {
   display: flex;
@@ -906,6 +908,10 @@ a {
   .comments__reply:hover {
     text-decoration: underline; }
 
+.form--auth {
+  max-width: 28rem;
+  margin: 0 auto; }
+
 .form__group {
   margin-bottom: 1.5rem;
   position: relative; }
@@ -942,6 +948,15 @@ a {
   bottom: 0;
   z-index: 1;
   transition: width .2s linear; }
+
+.form__footer {
+  text-align: center; }
+
+.form-footer-list {
+  display: flex;
+  justify-content: center; }
+  .form-footer-list li {
+    margin: 0 .5rem; }
 
 .work {
   display: flex;
