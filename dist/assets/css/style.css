@@ -389,6 +389,13 @@ a:hover {
 
 /* Blocks*/
 .page {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -396,6 +403,10 @@ a:hover {
     font-size: 2.1rem;
     color: #fff;
     margin-bottom: 3rem;
+}
+
+.page__title--center {
+    text-align: center;
 }
 
 .header {
@@ -1167,15 +1178,24 @@ a:hover {
     text-decoration: underline;
 }
 
+.form--auth {
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
 .form__group {
     margin-bottom: 1.5rem;
     position: relative;
 }
 
+.form__group--md {
+    margin-bottom: 2.5rem;
+}
+
 .form__control {
     display: block;
     width: 100%;
-    padding: .5rem 0;
+    padding: .5rem 0 .75rem;
     background: none;
     border: none;
     border-bottom: 1px solid #828282;
@@ -1225,6 +1245,23 @@ a:hover {
     bottom: 0;
     z-index: 1;
     transition: width .2s linear;
+}
+
+.form__footer {
+    text-align: center;
+}
+
+.form-footer-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.form-footer-list li {
+    margin: 0 .5rem;
 }
 
 .work {
@@ -1296,4 +1333,39 @@ a:hover {
     font-size: 1.1rem;
     color: #fff;
     text-align: center;
+}
+
+.cabinet {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cabinet__form {
+    width: 34rem;
+}
+
+.cabinet__avatar {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 11rem;
+}
+
+.cabinet__avatar img {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.cabinet__file {
+    font-size: 1.4rem;
+    color: #3137C9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cabinet__file input {
+    display: none;
+}
+
+.cabinet__file:hover {
+    text-decoration: none;
 }
