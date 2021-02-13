@@ -364,24 +364,33 @@ a {
 
 .header {
   display: flex;
-  width: calc(100% - 300px);
+  width: calc(100% - 30rem);
   background-color: #0d0d0d;
   box-shadow: 0 5px 22px rgba(13, 13, 13, 0.25);
   position: fixed;
   top: 0;
   right: 0;
   z-index: 100; }
+  @media screen and (max-width: 991px) {
+    .header {
+      width: 100%; } }
 
 .header__left {
   width: 60%; }
+  @media screen and (max-width: 991px) {
+    .header__left {
+      width: 40%; } }
 
 .header__right {
   width: 40%;
   display: flex;
   justify-content: flex-end; }
+  @media screen and (max-width: 991px) {
+    .header__right {
+      width: 60%; } }
 
 .sidebar {
-  width: 300px;
+  width: 30rem;
   height: 100vh;
   background-color: #202020;
   box-shadow: 5px 0 15px rgba(5, 5, 5, 0.1);
@@ -389,18 +398,28 @@ a {
   top: 0;
   left: 0;
   z-index: 100; }
+  @media screen and (max-width: 991px) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform .2s linear; }
+      .show-sidebar .sidebar {
+        display: block;
+        transform: translateX(0); } }
 
 .sidebar__header {
-  height: 180px; }
+  height: 18rem;
+  background-color: #121212; }
   .sidebar__header img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  @media screen and (max-width: 991px) {
+    .sidebar__header {
+      height: 10rem; } }
 
 .sidebar__content {
-  padding: 0 2rem;
-  margin-top: -5rem; }
+  padding: 0 2rem; }
 
 .sidebar__footer {
   display: flex;
@@ -408,13 +427,27 @@ a {
   padding: 0 2rem; }
 
 .main {
-  padding: 10rem 0 8rem 300px; }
+  padding: 10rem 0 8rem 30rem; }
+  @media screen and (max-width: 991px) {
+    .main {
+      padding-left: 0; } }
 
 .container {
   max-width: 70rem;
   margin: 0 auto;
   padding-left: 5rem;
   padding-right: 5rem; }
+  @media screen and (max-width: 700px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; } }
+
+.profile {
+  margin-top: -5rem; }
+  @media screen and (max-width: 991px) {
+    .profile {
+      margin-top: -3.25rem;
+      position: relative; } }
 
 .profile__avatar {
   display: block;
@@ -425,6 +458,13 @@ a {
   border: 2px solid #fff;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
   border-radius: 50%; }
+  @media screen and (max-width: 991px) {
+    .profile__avatar {
+      width: 6.5rem;
+      height: 6.5rem;
+      margin-left: 0;
+      position: absolute;
+      left: 0; } }
 
 .profile__name {
   font-size: 1.8rem;
@@ -486,6 +526,10 @@ a {
     border-radius: 0.41em; }
   .btn--sm {
     padding: 0.66em 1.25em; }
+
+@media screen and (max-width: 991px) {
+  .nav {
+    display: none; } }
 
 .nav__list {
   display: flex; }
@@ -630,8 +674,10 @@ a {
 
 .add-post__textarea {
   display: block;
+  flex-grow: 1;
   height: 26px;
   width: 70%;
+  overflow: hidden;
   font-family: inherit;
   border: none;
   background: transparent;
@@ -642,7 +688,8 @@ a {
     color: #828282; }
 
 .add-post__form-actions {
-  width: 30%;
+  width: 120px;
+  flex-shrink: 0;
   display: flex;
   justify-content: flex-end; }
 
@@ -1045,7 +1092,7 @@ a {
     text-decoration: none; }
 
 .modal {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1094,3 +1141,42 @@ a {
     text-decoration: underline; }
     .modal__footer a:hover {
       text-decoration: none; }
+
+.burger {
+  width: 3rem;
+  height: 2rem;
+  padding: 0;
+  background: none;
+  font-size: 0;
+  color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%); }
+  .burger:before, .burger:after, .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0; }
+  .burger:before, .burger:after {
+    content: "";
+    transition: transform .2s linear; }
+  .burger:before {
+    top: 0; }
+  .burger:after {
+    bottom: 0; }
+  .burger span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .2s linear; }
+  .show-sidebar .burger span {
+    opacity: 0; }
+  .show-sidebar .burger:before {
+    transform: rotate(45deg); }
+  .show-sidebar .burger:after {
+    transform: rotate(-45deg); }
+  .show-sidebar .burger:before, .show-sidebar .burger:after {
+    top: 50%; }

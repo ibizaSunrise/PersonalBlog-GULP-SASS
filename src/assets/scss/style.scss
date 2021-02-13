@@ -1,5 +1,6 @@
 @import "vendor/reset";
 @import "vars";
+@import "mixins";
 
 html {
     font-size: 62.5%;
@@ -53,3 +54,4 @@ a{
 @import "blocks/tags";
 @import "blocks/cabinet";
 @import "blocks/modal";
+@import "blocks/burger";
