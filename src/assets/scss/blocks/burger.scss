@@ -1,4 +1,5 @@
 .burger{
+    display: none;
     width: 3rem;
     height: 2rem;
     padding: 0;
@@ -56,5 +57,9 @@
         &:before, &:after{
             top: 50%;
         }
+    }
+
+    @include breakpoint($tablet-bp){
+        display: block;
     }
 }

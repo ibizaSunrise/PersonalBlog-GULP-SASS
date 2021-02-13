@@ -1,8 +1,9 @@
 .profile{
     margin-top: -5rem;
     @include breakpoint($tablet-bp){
-        margin-top: -3.25rem;
+        margin-top: -1rem;
         position: relative;
+        border-bottom: 1px solid $secondary;
     }
 }
 .profile__avatar{
@@ -23,9 +24,21 @@
     }
 }
 
+.profile__header{
+    margin-bottom: 2rem;
+    text-align: center;
+    @include breakpoint($tablet-bp){
+        padding-left: 8rem;
+        padding-top: 2rem;
+        text-align: left;
+    }
+}
+
 .profile__name{
     font-size: 1.8rem;
-    text-align: center;
+    @include breakpoint($tablet-bp){
+        font-size: 1.5rem;
+    }
 }
 
 .profile__prof{
@@ -33,7 +46,9 @@
     margin-bottom: 2rem;
     font-weight: 300;
     color: $text;
-    text-align: center;
+    @include breakpoint($tablet-bp){
+        font-size: 1.2rem;
+    }
 }
 
 .profile__text{
@@ -43,4 +58,7 @@
     text-align: center;
     border-top: 1px solid $secondary;
     border-bottom: 1px solid $secondary;
+    @include breakpoint($tablet-bp){
+        display: none;
+    }
 }
