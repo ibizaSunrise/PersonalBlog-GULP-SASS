@@ -4,6 +4,9 @@
     background-color: $secondary;
     box-shadow: 0 15px 25px rgba($black, 0.45);
     border-radius: 5px;
+    @include breakpoint($mobile-bp){
+        padding: 1.5rem;
+    }
 }
 
 .add-post__form {
@@ -29,10 +32,13 @@
 }
 
 .add-post__form-actions {
-    width: 120px;
+    width: 12rem;
     flex-shrink: 0;
     display: flex;
     justify-content: flex-end;
+    @include breakpoint($mobile-bp){
+        width: 9rem;
+    }
 }
 
 .add-post__file,
@@ -44,6 +50,10 @@
     cursor: pointer;
     border: none;
     transition: background-color 0.1s linear;
+    @include breakpoint($mobile-bp){
+        width: 3.4rem;
+        height: 3.4rem;
+    }
 }
 
 .add-post__send {

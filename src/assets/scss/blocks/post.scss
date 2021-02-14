@@ -5,6 +5,9 @@
     border-radius: 5px;
     box-shadow: 0 15px 25px rgba($black, 0.35);
     overflow: hidden;
+    @include breakpoint($mobile-bp){
+        padding: 1.5rem;
+    }
 }
 
 .post__header {
@@ -106,12 +109,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .post__data {
     display: flex;
     color: $gray;
     line-height: 1.2rem;
+    @include breakpoint($mobile-bp){
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
 }
 
 .post__data-item {
