@@ -570,11 +570,13 @@ a {
 
 @media screen and (max-width: 991px) {
   .nav {
-    display: none; } }
+    display: none; }
+    .nav--mobile {
+      display: block;
+      margin: 3rem 0; } }
 
 .nav--mobile {
-  display: block;
-  margin: 3rem 0; }
+  display: none; }
 
 .nav__list {
   display: flex; }
@@ -1249,6 +1251,8 @@ a {
   top: 0;
   left: 0;
   z-index: 110; }
+  .modal.show {
+    display: flex; }
 
 .modal__content {
   width: 100%;
@@ -1258,6 +1262,9 @@ a {
   position: relative; }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
+  .modal__content--story {
+    padding: 0;
+    background: none; }
 
 .modal__close {
   padding: 0;
@@ -1286,6 +1293,10 @@ a {
     text-decoration: underline; }
     .modal__footer a:hover {
       text-decoration: none; }
+
+.modal__video {
+  display: block;
+  margin: 0 auto; }
 
 .burger {
   display: none;
