@@ -333,8 +333,11 @@ body {
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #fff; }
-  body.no-scroll, body.snow-sidebar {
+  body.no-scroll {
     overflow: hidden; }
+  @media screen and (max-width: 991px) {
+    body.show-sidebar {
+      overflow: hidden; } }
 
 *,
 *:before,
@@ -356,17 +359,7 @@ a {
   overflow: hidden; }
   @media screen and (max-width: 991px) {
     .show-sidebar .page {
-      position: relative; }
-      .show-sidebar .page:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(13, 13, 13, 0.8);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 90; } }
+      position: relative; } }
 
 .page__title {
   font-size: 2.1rem;
@@ -374,6 +367,17 @@ a {
   margin-bottom: 3rem; }
   .page__title--center {
     text-align: center; }
+
+@media screen and (max-width: 991px) {
+  .page__mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90; } }
 
 .header {
   display: flex;
@@ -568,15 +572,15 @@ a {
   .btn--sm {
     padding: 0.66em 1.25em; }
 
+.nav--mobile {
+  display: none; }
+
 @media screen and (max-width: 991px) {
   .nav {
     display: none; }
     .nav--mobile {
       display: block;
       margin: 3rem 0; } }
-
-.nav--mobile {
-  display: none; }
 
 .nav__list {
   display: flex; }
@@ -753,12 +757,12 @@ a {
 
 .add-post__form {
   display: flex;
-  align-items: center; }
+  align-items: flex-end; }
 
 .add-post__textarea {
   display: block;
   flex-grow: 1;
-  height: 26px;
+  height: 34px;
   width: 70%;
   overflow: hidden;
   font-family: inherit;
@@ -1259,7 +1263,13 @@ a {
   max-width: 500px;
   padding: 8rem;
   background-color: #202020;
-  position: relative; }
+  position: relative;
+  transform: translateY(-50px);
+  transition: transform 300ms linear, opacity 300ms linear;
+  opacity: 0; }
+  @media screen and (max-width: 991px) {
+    .modal__content {
+      padding: 5rem 3rem 3rem; } }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
   .modal__content--story {

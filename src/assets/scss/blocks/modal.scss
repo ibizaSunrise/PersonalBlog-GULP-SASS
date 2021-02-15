@@ -23,6 +23,13 @@
     padding: 8rem;
     background-color: $primary;
     position: relative;
+    transform: translateY(-50px);
+    transition: transform 300ms linear, opacity 300ms linear;
+    opacity: 0;
+
+    @include breakpoint($tablet-bp){
+        padding: 5rem 3rem 3rem;
+    }
 
     &--contact{
         padding-bottom: 2.5rem;

@@ -19,7 +19,7 @@
 <body>
     <!-- class = "show-sidebar" -->
 
-    <div class="page">
+    <div class="page" id = "page">
         <header class="header">
             <div class="header__left">
                 <nav class="nav">
@@ -49,7 +49,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="burger" type="button">
+                <button class="burger" type="button" id = "sidebarToggle">
                     <span>open nav</span>
                     
                 </button>
@@ -70,7 +70,7 @@
                 </form>
             </div>
         </header>
-        <aside class="sidebar">
+        <aside class="sidebar" id = "sidebar">
             <div class="sidebar__header">
                 <img src="assets/images/sidebar-header.jpg" alt="">
             </div>
@@ -222,7 +222,7 @@
                         <form class="form" action="/" method="POST">
                             <div class="form__group">
                                 <textarea class="form__control form__control--textarea" name="comment-text"
-                                    placeholder="Текст комментария"></textarea>
+                                    placeholder="Текст комментария" data-autoresize></textarea>
                                 <span class="form__line"></span>
                             </div>
                             <button class="btn btn--blue btn--rounded btn--sm" type="submit">Отправить</button>
